@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import * as path from 'path';
 import * as hbs from 'hbs';
+import {} from '@nestjs/passport';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -20,8 +21,6 @@ async function bootstrap() {
     require('node-sass-middleware')({
       src: path.join(__dirname, '/public/css'),
       dest: path.join(__dirname, '/public/css'),
-      // src: __dirname + '/public/css',
-      // dest: __dirname + '/public/css',
       debug: true,
       outputStyle: 'compressed',
     }),
