@@ -10,8 +10,7 @@
     {{{body}}}
   </div>
 
-  <hr>
-  {{>footer}}
+  <hr> {{>footer}}
 
 </body>
 
@@ -40,5 +39,20 @@
       array[i].classList.remove('active');
     }
   }
+
+  $("#firstName").on("input", function () {
+    var regexp = /[^a-zA-Z áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]/g;
+    if (this.value.match(regexp)) {
+      $(this).val(this.value.replace(regexp, ''));
+    }
+  });
+
+  $("#lastName").on("input", function () {
+    var regexp = /[^a-zA-Z áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]/g;
+    if (this.value.match(regexp)) {
+      $(this).val(this.value.replace(regexp, ''));
+    }
+  });
+
 
 </script>
