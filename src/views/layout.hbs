@@ -4,7 +4,7 @@
 {{>head}}
 
 <body>
- {{>nav}}
+  {{>nav}}
 
   <div class="container">
     {{{body}}}
@@ -13,3 +13,29 @@
 </body>
 
 </html>
+
+
+<script>
+  // Script para setar active da navbar
+  var url = document.URL;
+  var array = document.getElementsByClassName('nav-item');
+  var home = true;
+
+  for (i = 0; i < array.length; i++) {
+    if (url.search(array[i].id) != -1) {
+      array[i].classList.add('active');
+      home = false;
+    } else {
+      array[i].classList.remove('active');
+    }
+  }
+
+
+  if (home) {
+    array[0].classList.add('active');
+    for (i = 1; i < array.length; i++) {
+      array[i].classList.remove('active');
+    }
+  }
+
+</script>
