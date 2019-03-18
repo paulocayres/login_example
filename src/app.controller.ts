@@ -8,18 +8,6 @@ export class AppController {
   @Get()
   @Render('index')
   index() {
-    return {teste: 'testando'};
-  }
-
-  @Get('/login')
-  @Render('login')
-  login() {
-    return {teste: 'testando'};
-  }
-
-  @Get('/register')
-  @Render('register')
-  register() {
-    return {teste: 'testando'};
+    return { teste: 'testando' };
   }
 }
