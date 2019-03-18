@@ -23,6 +23,7 @@ async function bootstrap() {
   app.enableCors();
   hbs.registerPartial('head', 'head');
   hbs.registerPartial('nav', 'nav');
+  hbs.registerPartial('footer', 'footer');
 
 /*   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({extended: false}));
