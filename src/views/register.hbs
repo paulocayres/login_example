@@ -4,14 +4,14 @@
         <div class="row">
             <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required="">
                 <div class="invalid-feedback">
                     Valid first name is required.
                 </div>
             </div>
             <div class="col-md-6 mb-3">
                 <label for="lastName">Last name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="" required="">
                 <div class="invalid-feedback">
                     Valid last name is required.
                 </div>
@@ -21,7 +21,7 @@
         <div class="mb-3">
             <label for="username">Username</label>
             <div class="input-group">
-                <input type="text" class="form-control" id="username" placeholder="Username" required="">
+                <input type="text" class="form-control" id="userName" name="userName" placeholder="Username" required="">
                 <div class="invalid-feedback" style="width: 100%;">
                     Your username is required.
                 </div>
@@ -31,7 +31,7 @@
         <div class="mb-3">
             <label for="password">Password</label>
             <div class="input-group">
-                <input type="text" class="form-control" id="passwword" placeholder="Password" required="">
+                <input type="text" class="form-control" id="passwword" name="password" placeholder="Password" required="">
                 <div class="invalid-feedback" style="width: 100%;">
                     Your password is required.
                 </div>
@@ -41,7 +41,7 @@
         <div class="mb-3">
             <label for="repeatpassword">Repeat Password</label>
             <div class="input-group">
-                <input type="text" class="form-control" id="repeatpassword" placeholder="Password again" required="">
+                <input type="text" class="form-control" id="repeatPassword" name="repeatPassword" placeholder="Password again" required="">
                 <div class="invalid-feedback" style="width: 100%;">
                     Repeat your password please.
                 </div>
@@ -50,4 +50,32 @@
 
         <button class="btn btn-primary " type="submit">Register</button>
     </form>
+
+
+    <div class="modal" id="confirmModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="modal-header" class="modal-header">
+                    <h5 class="modal-title">Cadastro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="modal" class="modal-body">
+                    <p>{{message}}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script type="text/javascript">
+    var mes = '';
+    mes = '{{message}}';
+    if (mes != "" && mes != null) {
+        $('#confirmModal').modal('show');
+    }
+</script>
