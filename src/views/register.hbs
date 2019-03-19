@@ -1,17 +1,17 @@
 <div class="col-md-8 order-md-1">
     <h4 class="mb-3">Register</h4>
-    <form class="needs-validation" novalidate="" method="POST" action="/register">
+    <form class="needs-validation" method="POST" action="/register">
         <div class="row">
             <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required="">
+                <input type="text" required class="form-control" id="firstName" name="firstName" placeholder="" value="">
                 <div class="invalid-feedback">
                     Valid first name is required.
                 </div>
             </div>
             <div class="col-md-6 mb-3">
                 <label for="lastName">Last name</label>
-                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="" required="">
+                <input type="text" required class="form-control" id="lastName" name="lastName" placeholder="" value="">
                 <div class="invalid-feedback">
                     Valid last name is required.
                 </div>
@@ -21,7 +21,7 @@
         <div class="mb-3">
             <label for="username">Username</label>
             <div class="input-group">
-                <input type="text" class="form-control" id="userName" name="userName" placeholder="Username" required="">
+                <input type="text" required class="form-control" id="userName" name="userName" placeholder="Username">
                 <div class="invalid-feedback" style="width: 100%;">
                     Your username is required.
                 </div>
@@ -31,7 +31,7 @@
         <div class="mb-3">
             <label for="password">Password</label>
             <div class="input-group">
-                <input type="text" class="form-control" id="passwword" name="password" placeholder="Password" required="">
+                <input type="text" required class="form-control" id="passwword" name="password" placeholder="Password">
                 <div class="invalid-feedback" style="width: 100%;">
                     Your password is required.
                 </div>
@@ -41,7 +41,7 @@
         <div class="mb-3">
             <label for="repeatpassword">Repeat Password</label>
             <div class="input-group">
-                <input type="text" class="form-control" id="repeatPassword" name="repeatPassword" placeholder="Password again" required="">
+                <input type="text" required class="form-control" id="repeatPassword" name="repeatPassword" placeholder="Password again">
                 <div class="invalid-feedback" style="width: 100%;">
                     Repeat your password please.
                 </div>
